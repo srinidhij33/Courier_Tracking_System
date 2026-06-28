@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline;
+      margin-left: 10px;
+      font-size: 32px;
+      vertical-align: middle;
+    }
+
+    .description {
+      padding: 20px;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    .news-categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .news-category {
+      text-align: center;
+      width: 30%;
+    }
+
+    .news-category img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 20px;
+      background-color: #e0e0e0;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .marquee-text {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    marquee {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/88/TV9_Telugu_Logo.png" alt="TV9 Logo">
+    <h1>TV9 News Portal</h1>
+  </header>
+
+  <!-- Scrolling Text -->
+  <div class="marquee-text">
+    <marquee behavior="scroll" direction="left">Welcome to TV9 News - Get the latest updates from Politics, Sports, and Entertainment!</marquee>
+  </div>
+
+  <!-- Description -->
+  <div class="description">
+    <p>TV9 is one of India's most trusted and fastest news networks, delivering real-time updates and in-depth reporting on the events shaping the world around you.</p>
+  </div>
+
+  <!-- News Categories -->
+  <div class="news-categories">
+    <div class="news-category">
+      <img src="https://img.etimg.com/thumb/msid-98933863,width-1200,height-900,imgsize-66426,overlay-etbrandequity/photo.jpg" alt="Politics">
+      <h3>Politics</h3>
+      <p>The political landscape in India is rapidly evolving with upcoming elections and major policy shifts. Stay tuned for expert insights.</p>
+    </div>
+    <div class="news-category">
+      <img src="https://www.hindustantimes.com/ht-img/img/2023/10/15/1600x900/IND_vs_PAK_World_Cup_2023_1697357555172_1697357555392.jpg" alt="Sports">
+      <h3>Sports</h3>
+      <p>India clinched a historic victory in the latest World Cup match against Pakistan. Full highlights and analysis inside.</p>
+    </div>
+    <div class="news-category">
+      <img src="https://static.toiimg.com/photo/msid-102469613/102469613.jpg" alt="Entertainment">
+      <h3>Entertainment</h3>
+      <p>Bollywood's latest blockbuster is breaking records worldwide! Catch exclusive interviews and behind-the-scenes stories.</p>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section">
+    <h2>Breaking News Video</h2>
+    <!-- Use video or iframe -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nzN2f9djiq4" title="Breaking News Video" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="date"></p>
+    <p>&copy; SBIT 2025</p>
+  </footer>
+
+  <!-- Script to Display Date -->
+  <script>
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yy = String(today.getFullYear()).slice(-2);
+    document.getElementById("date").textContent = `Date: ${dd}-${mm}-${yy}`;
+  </script>
+
+</body>
+</html>
